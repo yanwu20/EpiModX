@@ -13,13 +13,10 @@ Epigenetic modifications play a vital role in the pathogenesis of human diseases
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/project-name.git
-cd project-name
+git clone [https://github.com/your-username/project-name.git](https://github.com/yanwu20/EpiModX.git)
+cd EpiModX
 
-
-pip install -r requirements.txt
-
-conda create -n project-env python=3.10
+conda create -n project-env python=3.9
 conda activate project-env
 pip install -r requirements.txt
 
