@@ -16,7 +16,7 @@ Our framework establishes a powerful new paradigm for epigenetic research that c
 Clone the repository:
 
 ```bash
-git clone [https://github.com/your-username/project-name.git](https://github.com/yanwu20/EpiModX.git)
+git clone https://github.com/yanwu20/EpiModX.git
 cd EpiModX
 
 conda create -n EpiModX python=3.9
