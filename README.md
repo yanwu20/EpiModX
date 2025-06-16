@@ -37,16 +37,19 @@ pip install -r requirements.txt
 
 
 ## ✅ Training
+
+To start training the model, run:
+
 ```bash
 python train_MTL_Moe.py -w True --save_model True 
 
 ```
 
 ## ✅ Prediction
-
+To run all tests, execute:
 
 ```bash
-python test_MTL_Moe.py
+python test_MTL_Moe.py -h H3K27ac
 
 ```
 ## ✅ Contact
