@@ -35,6 +35,9 @@ pip install -r requirements.txt
 
 • scikit-learn
 
+## 📥 Downloading the Human Reference Genome
+
+🧬 The human reference genome (e.g., GRCh38) can be downloaded from GENCODE.
 
 ## ✅ Training
 
