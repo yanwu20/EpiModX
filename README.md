@@ -38,7 +38,7 @@ pip install -r requirements.txt
 
 ## ✅ Training
 ```bash
-python train_MTL_Moe.py
+python train_MTL_Moe.py -w True --save_model True 
 
 ```
 
