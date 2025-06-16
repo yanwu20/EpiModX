@@ -29,10 +29,10 @@ def main(args):
     # histone = "H3K27me3"
     # histone = "H3K27ac"
     histone = "H3K4me3"
-    model_name = "LLM_Moe_l5120"
+    model_name = "LLM_Moe"
     # model_name = "CNN_Moe"
     print("load parameters")
-    model_path = "/home/xiaoyu/Genome/AD_histone/models/%s_%s.pt" %(histone,model_name)
+    model_path = "./models/%s_%s.pt" %(histone,model_name)
     early_stop = 0
     max_early_stop = 5
     batch_size = 8 # 8 
@@ -45,9 +45,9 @@ def main(args):
     print("load datasets...")
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     if model_name == "CNN_Moe":
-        data_module = ADDataModule("/home/xiaoyu/Genome/AD_histone/Datasets/%s_all_data.csv" %histone,["chr10"], ["chr8","chr9"],seq_length, batch_size,pretrain=False)
+        data_module = ADDataModule("./Datasets/%s_all_data.csv" %histone,["chr10"], ["chr8","chr9"],seq_length, batch_size,pretrain=False)
     else:
-        data_module = ADDataModule("/home/xiaoyu/Genome/AD_histone/Datasets/%s_all_data.csv" %histone,["chr10"], ["chr8","chr9"],seq_length, batch_size,pretrain=True)
+        data_module = ADDataModule("./Datasets/%s_all_data.csv" %histone,["chr10"], ["chr8","chr9"],seq_length, batch_size,pretrain=True)
     train_loader = data_module.train_dataloader()
     vali_loader = data_module.val_dataloader()
     test_loader = data_module.test_dataloader()    
@@ -148,7 +148,7 @@ def main(args):
                     
             if global_step%30000 == 0:
             # if global_step%30 == 0:
-                model_path_last = "/home/xiaoyu/Genome/AD_histone/models/%s_%s_last.pt" %(histone,model_name)
+                model_path_last = "./models/%s_%s_last.pt" %(histone,model_name)
                 if args.save_model:
                     torch.save({
                         'model_state_dict': model.state_dict(),
