@@ -45,6 +45,6 @@ python train_MTL_Moe.py -w True --save_model True
 ## ✅ Prediction
 
 ```bash
-python train_MTL_Moe.py
+python test_MTL_Moe.py
 
 ```
