@@ -15,7 +15,7 @@ class ADDataModule():
     def __init__(self, data_dir: str = "path/to/dir",vali_set = ["chr10"], test_set=["chr8","chr9"], seq_length = 4096,batch_size: int = 64, pretrain = False):
         super().__init__()
 
-        faste_path = "/home/xiaoyu/Genome/data/human/genome/GRCh38_no_alt_analysis_set_GCA_000001405.15.fasta"
+        faste_path = "Path to reference genome"
         self.fasta_file =pysam.Fastafile(faste_path)
         self.data_dir = data_dir
         self.batch_size = batch_size
