@@ -37,7 +37,7 @@ pip install -r requirements.txt
 
 ## 📥 Downloading the Human Reference Genome
 
-🧬 The human reference genome (e.g., GRCh38) can be downloaded from GENCODE.
+🧬 The human reference genome (e.g., GRCh38) can be downloaded from GENCODE and ENCODE (https://www.encodeproject.org/data-standards/reference-sequences).
 
 ## ✅ Training
 
